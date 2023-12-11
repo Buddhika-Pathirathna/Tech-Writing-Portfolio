@@ -7,7 +7,7 @@ This tutorial introduces an implementation of the CEP-18 standard for the Casper
 Following is the basic flow of the deployment process.
 <img src="/Diagrams/FungibleTokenSC.jpg"
      alt="Deployment Process Flow"
-     style="float: center; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" />
 
 
 ## Overview

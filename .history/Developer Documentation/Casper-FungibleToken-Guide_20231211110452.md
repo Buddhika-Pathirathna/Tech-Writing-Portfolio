@@ -5,9 +5,9 @@ This tutorial introduces an implementation of the CEP-18 standard for the Casper
 2. Deploying the contract to the network
 
 Following is the basic flow of the deployment process.
-<img src="/Diagrams/FungibleTokenSC.jpg"
+<img src="Tech-Writing-Portfolio/Diagrams/FungibleTokenSC.jpg"
      alt="Deployment Process Flow"
-     style="float: center; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" />
 
 
 ## Overview
