@@ -7,7 +7,7 @@ This tutorial introduces an implementation of the CEP-18 standard for the Casper
 Following is the basic flow of the deployment process.
 <img src="/Diagrams/FungibleTokenSC.jpg"
      alt="Deployment Process Flow"
-     style="float: center; margin-right: 20px;" />
+     style="float: center; margin-right: 2000px;" />
 
 
 ## Overview
@@ -172,7 +172,7 @@ The contract methods are:
 
 After directory preparation and customizing your instance of the CEP-18 token contract, it's time to deploy it to the network. Deploying the fungible token contract is similar to deploying other smart contracts. Only the Wasm files and parameters will differ. Refer to the [Sending Deploys to a Casper network using the Rust Client](https://docs.casper.network/developers/dapps/sending-deploys/) section to learn more about deploying contracts to the network.
 
-**Basic Deploy Flow**
+## Basic Deploy Flow
 
 Here are the basic steps to deploy Casper's fungible token contract on a Casper Network.
 
@@ -190,7 +190,7 @@ Here are the basic steps to deploy Casper's fungible token contract on a Casper 
 - Follow the guide to [fund your account](https://docs.casper.network/developers/prerequisites/#fund-your-account) or to [transfer tokens](https://docs.casper.network/developers/cli/transfers/) as needed.
 - Install the [Casper command-line client](https://docs.casper.network/developers/prerequisites/#install-casper-client) to interact with the network.
 
-## Cloning the Base Contract
+### Cloning the Base Contract
 
 This step includes cloning and preparing the token contract for the deployment.
 
@@ -222,11 +222,11 @@ make test
 
 ```
 
-## Getting an IP Address from a Testnet Peer
+### Getting an IP Address from a Testnet Peer
 
 You can use an IP address from a Testnet [peer](https://testnet.cspr.live/tools/peers) to send the deploy. Read the guide [acquiring a node address](https://docs.casper.network/developers/prerequisites/#acquire-node-address-from-network-peers) to know more about peers.
 
-## Viewing the Network Status
+### Viewing the Network Status
 Follow the below steps to view the network status.
 These queries capture any information related to the state of the blockchain at the specific time denoted by the network's state root hash. 
 **Note**: First, you need to have the state root hash and the account hash to run the query.
@@ -264,7 +264,7 @@ casper-client query-global-state \
 - `ACCOUNT_HASH`: The AccountHash is a 32-byte hash derived from a supported PublicKey. Its role is to standardize keys that can vary in length.
 
 
-## Deploying the Contract to the Network 
+### Deploying the Contract to the Network 
 
 Now you can deploy the contract to the network and check how it behaves.
 
@@ -302,11 +302,11 @@ casper-client put-deploy \
 --session-arg "name='Token test', symbol='TEST', decimals:u8=10, total_supply:u256=1000"
 ```
 
-## Querying the Network Status
+### Querying the Network Status
 
 You will need the newest state root hash to view the network status, as it changed with the deploy. The account hash remains the same since you are using the same account. Follow the [viewing the network state](#viewing-the-network-status) section to execute this step with the new state root hash.
 
-## Verifying the Deploy
+### Verifying the Deploy
 
 Now you can verify the sent deploy using the `get-deploy` command. This will output the details of the sent deploy.
 
@@ -315,7 +315,7 @@ casper-client get-deploy \
 --node-address http://<HOST:PORT> [DEPLOY_HASH]
 ```
 
-## Querying with Arguments
+### Querying with Arguments
 
 This step will narrow down the context and check the status of a specific entry point. To derive arguments, you will use the details inside the [Fungible Token contract](https://github.com/casper-ecosystem/cep18/blob/master/cep18/src/main.rs).
 
